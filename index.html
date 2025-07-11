@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Umesh Pathak Portfolio</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
+<link href="css/open-iconic-bootstrap.min.css" rel="stylesheet"/>
+<link href="css/animate.css" rel="stylesheet"/>
+<link href="css/owl.carousel.min.css" rel="stylesheet"/>
+<link href="css/owl.theme.default.min.css" rel="stylesheet"/>
+<link href="css/magnific-popup.css" rel="stylesheet"/>
+<link href="css/aos.css" rel="stylesheet"/>
+<link href="css/ionicons.min.css" rel="stylesheet"/>
+<link href="css/flaticon.css" rel="stylesheet"/>
+<link href="css/icomoon.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .navbar,
+.dark-mode .ftco-footer {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .progress-bar {
+  background-color: #ff9800; /* slightly more visible on dark */
+}
+
+
+</style>
+</head>
+<script>
+  document.getElementById("dark-mode-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+<body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+<div class="container">
+<a class="navbar-brand" href="index.html">Umesh Pathak</a>
+<button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" data-target="#ftco-nav" data-toggle="collapse" type="button">
+<span class="oi oi-menu"></span> Menu
+	      </button>
+<div class="collapse navbar-collapse" id="ftco-nav">
+<ul class="navbar-nav nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="#home-section"><span>Home</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#about-section"><span>About</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#resume-section"><span>Resume</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#certifications-section"><span>Certifications</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#project-section"><span>Projects</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#contact-section"><span>Contact</span></a></li>
+
+</ul>
+</div>
+</div>
+</nav>
+<section class="hero" id="home-section">
+<div class="home-slider owl-carousel">
+<div class="slider-item">
+<div class="overlay"></div>
+<div class="container">
+<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+<div class="overlay"></div>
+</div>
+<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+<div class="text">
+<span class="subheading">Hello!</span>
+<h1 class="mb-4 mt-3">I'm <span>Umesh Pathak</span></h1>
+<!-- Element to contain animated typing -->
+<span id="typing-animation"></span>
+<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Automation Enthusiast',  
+						'QA Expert  ',
+						'Mentor   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+<br/>
+<br/>
+<h2>A Senior SDET</h2>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+<div class="container">
+<div class="row">
+<div class="row d-flex align-items-stretch">
+<!-- <div class="row d-flex"> -->
+<div class="col-md-6 col-lg-5 d-flex">
+<div class="img-about img d-flex align-items-stretch">
+<div class="overlay">
+<div class="row">
+<div class="col-sm-6 col-md-5">
+<div class="about-img">
+<img alt="" class="img-fluid rounded b-shadow-a" loading="lazy" src="images/about-me.png"/>
+</div>
+</div>
+<!-- Details next to profile image -->
+<div class="col-sm-6 col-md-7">
+<div class="about-info">
+<p><span class="title-s">Name: </span> <span>Umesh Pathak</span></p>
+<p><span class="title-s">Job Role: </span> <span>Senior Quality Analyst</span></p>
+<p><span class="title-s">Experience: </span> <span>7+ Years </span></p>
+<p><span class="title-s">Address: </span> <span>New Delhi, India</span></p>
+</div>
+</div>
+</div>
+<div class="skill-mf">
+<p class="title-s">Skills</p>
+<span>QA Thought Process</span> <span class="pull-right">100%</span>
+<div class="progress" data-aos="fade-right">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" class="progress-bar" role="progressbar" style="width: 95%;"></div>
+</div>
+<span>Java</span> <span class="pull-right">85%</span>
+<div class="progress" data-aos="fade-right">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar" role="progressbar" style="width: 85%"></div>
+</div>
+<span>Cross Team Collaboration</span> <span class="pull-right">90%</span>
+<div class="progress" data-aos="fade-right">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar" role="progressbar" style="width: 90%"></div>
+</div>
+<span>Back-End Automation</span> <span class="pull-right">85%</span>
+<div class="progress" data-aos="fade-right">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar" role="progressbar" style="width: 85%"></div>
+</div>
+<span>Front-End Automation</span> <span class="pull-right">80%</span>
+<div class="progress" data-aos="fade-right">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar" role="progressbar" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+<div class="row justify-content-start pb-3">
+<div class="col-md-12 heading-section ftco-animate">
+<h1 class="big">About</h1>
+<h2 class="mb-4">About Me</h2>
+<p>A self-driven Quality Analyst with 7+ years of experience in manual testing, automation testing, and DevOps, along with 2+ years of team management experience consisting of a team size of 5 people. Proficient in various domains, including Payments, Cashbacks &amp; Referrals, Fintech, E-Commerce, Travel, Insurance, AI, and Gaming. Adept at designing test strategies, implementing automation frameworks, and improving product quality.</p>
+<ul class="about-info mt-4 px-md-0 px-2">
+<li class="d-flex"><span>Profile:</span> <span>Quality  &amp; Analysis</span></li>
+<li class="d-flex"><span>Domain:</span> <span>Ecommerce,Fintech, AI &amp; Gaming</span></li>
+<li class="d-flex"><span>Education:</span> <span>MBA &amp; Bachelor of Engineering</span></li>
+<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+<li class="d-flex"><span>QA Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
+<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li>
+<!--	<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>-->
+</ul>
+</div>
+</div>
+<div class="counter-wrap ftco-animate d-flex mt-md-3">
+<div class="text">
+<p class="mb-4">
+<span class="number" data-number="30">0</span> <span>+</span>
+<span>  Projects completed</span>
+</p>
+<p><a class="btn btn-primary py-3 px-3" href="https://www.linkedin.com/in/umeshpathakk/">LinkedIn</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="ftco-section ftco-no-pb" id="resume-section">
+<div class="container">
+<div class="row justify-content-center pb-5">
+<div class="col-md-10 heading-section text-center ftco-animate">
+<h1 class="big big-2">Resume</h1>
+<h2 class="mb-4">Resume</h2>
+<p>Seasoned Quality Analyst with 7+ years of experience in manual and automation testing, DevOps, and 2+ years of team leadership. Known for delivering data-driven, high-impact results across domains like Payments, Fintech, Cashback &amp; Referrals, E-Commerce, Travel, Insurance, AI, and Gaming. Proven track record in designing effective test strategies, building robust automation frameworks, and consistently elevating product quality.</p>
+</div>
+</div>
+<div class="row">
+<h1 class="big-4">Experience</h1>
+<div class="underline"></div>
+</div>
+<br/>
+<div class="row">
+<div class="col-md-6">
+<div class="resume-wrap ftco-animate">
+<span class="date">2024-Present</span>
+<h2>SDET 2</h2>
+<span class="position">Nykaa</span>
+<p class="mt-4">India’s largest omnichannel beauty and wellness retailer (launched 2012), combining e-commerce and 100+ brick‑and‑mortar stores, offering 200k+ products from 2,000+ brands 
+							<ul>
+<li>Managed testing for Nykaa’s internal currencies, such as reward points, wallets, and gift cards.</li>
+<li>Conducted PCI-certified testing for Nykaa’s Native OTP page, ensuring secure and reliable transactions.</li>
+<li>Led end-to-end QA for the Indian version of the international footwear e-commerce site Foot Locker.</li>
+<li>Validated address and delivery estimation features for improved user experience in e-commerce platforms.</li>
+<li>Tested various discount types, offers, and coupon applications for robust promotions functionality.</li>
+<li>Tested the tokenization mechanism for CVV-Less cards and PG dynamic switching for Payments on Nykaa.</li>
+<li>Conducted QA for Nykaa’s AI-driven chatbots.</li>
+</ul>
+</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="resume-wrap ftco-animate">
+<span class="date">2022-2024</span>
+<h2>Senior Quality Analyst</h2>
+<span class="position">Paytm</span>
+<p class="mt-4">India’s leading fintech and digital payments platform, founded in 2010 under One97 Communications, offering a full suite of services—from UPI, wallets, and QR-code payments to banking, lending, trading, insurance, ticketing, and gaming—serving over 300 million users and 20 million merchants. 
+							<ul>
+<li>Analyzed requirements and created test cases for the complete Insurance flow.</li>
+<li>Conducted API testing using Rest Assured, Swagger, and Postman, improving API stability and performance.</li>
+<li>Led UI automation efforts using Selenium and Appium, reducing manual testing time by 50%.</li>
+<li>Managed lead and brokerage tracking under Paytm affiliates, ensuring accurate data tracking and reporting.</li>
+<li>Developed and executed comprehensive test plans and strategies for new features.</li>
+</ul>
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="resume-wrap ftco-animate">
+<span class="date">2020-2022</span>
+<h2>Quality Engineer</h2>
+<span class="position">Collegedunia</span>
+<p class="mt-4">Collegedunia is a leading Indian education portal and search engine founded in May 2014 by Sahil Chalana, offering information, rankings, reviews, and exam guidance on 20,000+ colleges and 6,000+ courses in India and abroad . 
+							<ul>
+<li>Actively participated in sprint planning and suggested modifications to product requirement documents (PRD).</li>
+<li>Conducted end-to-end functional testing and designed test cases for cashback apps, ensuring quality across modules like wallets and offers.</li>
+<li>Developed API testing frameworks using Rest Assured and Postman, and used Charles Proxy for network monitoring. Done Testing of 3rd-party games integrated with KickCash. </li>
+<li>Executed DevOps tasks including load balancing and auto-scaling in AWS, and monitored resources using Grafana.</li>
+</ul>
+</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="resume-wrap ftco-animate">
+<span class="date">2018-2020</span>
+<h2>Quality Analyst</h2>
+<span class="position">SWM</span>
+<p class="mt-4">SWM is a Noida‑based full‑service web design, development, and digital‑marketing agency founded in 2009, delivering responsive websites, e‑commerce solutions, mobile apps, SEO, and branding with over 14 years of experience serving thousands of clients across startups and enterprises . 
+							<ul>
+<li>Documented and executed test cases based on software requirements and tracked defects using JIRA.</li>
+<li>Automated testing for web and mobile applications using Selenium WebDriver and Appium.</li>
+<li>Performed performance testing with Apache JMeter and API testing using Postman, Rest Assured, and Katalon Studio.</li>
+<li>Implemented CI/CD pipelines using Jenkins and managed code with Git, ensuring streamlined development and testing processes.</li>
+<li>Worked on testing various 2D / 3D Unity games and suggested improvements and upsold many services.</li>
+</ul>
+</p>
+</div>
+</div>
+</div>
+<br/>
+<br/>
+<div class="row">
+<h1 class="big-4">Education</h1>
+<div class="underline"></div>
+</div>
+<br/>
+<div class="row">
+<div class="col-md-6">
+<div class="resume-wrap ftco-animate">
+<span class="date">2023-2025</span>
+<h2>Masters Of Business Administration</h2>
+<span class="position">IIM kAshipur</span>
+<p class="mt-4">Grade: First class distinction.</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="resume-wrap ftco-animate">
+<span class="date">2014-2018</span>
+<h2>Bachelor of Engineering</h2>
+<span class="position">APJ Abdul Kalam Technological University</span>
+<p class="mt-4">Grade: First class distinction.</p>
+</div>
+</div>
+</div>
+<div class="row justify-content-center mt-5">
+<div class="col-md-6 text-center ftco-animate">
+<p><a class="btn btn-primary py-4 px-5" href="#">Download CV</a></p>
+</div>
+</div>
+</div>
+</section>
+<section class="ftco-section" id="certifications-section">
+<div class="container">
+<div class="row justify-content-center mb-5 pb-3">
+<div class="col-md-7 heading-section text-center ftco-animate">
+<h1 class="big big-2">Certifications</h1>
+<h2 class="mb-4">Certifications</h2>
+<p>List of professional certifications that demonstrate my skills and expertise.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<div class="text p-4">
+<h3 class="heading"><a href="#">ISTQB Advanced Test Manager</a></h3>
+<p>Demonstrates deep knowledge of test management processes, strategies, and leadership.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<div class="text p-4">
+<h3 class="heading"><a href="#">AWS Certified Solutions Architect</a></h3>
+<p>Expertise in designing scalable, cost-effective, and secure cloud architectures on AWS.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<div class="text p-4">
+<h3 class="heading"><a href="#">Professional Scrum Master II</a></h3>
+<p>Advanced understanding of Agile principles, Scrum framework, and servant leadership.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<div class="text p-4">
+<h3 class="heading"><a href="#">Oracle Certified Java Associate (1Z0-808)</a></h3>
+<p>Proficient in Java programming fundamentals, OOP, and Java application development.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<div class="text p-4">
+<h3 class="heading"><a href="#">AWS Cloud Practitioner</a></h3>
+<p>Validates foundational AWS knowledge including services, billing, and security.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<div class="text p-4">
+<h3 class="heading"><a href="#">ISTQB Agile Extension</a></h3>
+<p>Specialization in Agile testing practices including Scrum and Kanban environments.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="ftco-section" id="project-section">
+<div class="container">
+<div class="row justify-content-center mb-5 pb-5">
+<div class="col-md-7 heading-section text-center ftco-animate">
+<h1 class="big big-2">Projects</h1>
+<h2 class="mb-4">Projects</h2>
+<p>Below are the sample QA Automation projects on Selenium Appium, Rest-Assured etc .</p>
+</div>
+</div>
+<div class="row d-flex">
+<div class="col-md-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<a class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+</a>
+<div class="text mt-3 float-right d-block">
+<h3 class="heading">Nykaa Checkout</h3>
+<p>Led end-to-end testing of Nykaa’s revamped checkout flow, ensuring smooth payments, coupon application, and cross-platform reliability.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<a class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+</a>
+<div class="text mt-3 float-right d-block">
+<h3 class="heading">Paytm Money Affiliates</h3>
+<p>Automated partner onboarding and tracking flows, validated affiliate APIs, ensured seamless earnings reports with data-driven regression testing.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 d-flex ftco-animate">
+<div class="blog-entry">
+<a class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+</a>
+<div class="text mt-3 float-right d-block">
+<h3 class="heading">Paytm Travel and Insurance</h3>
+<p>Owned test coverage for flight, train, and insurance modules; automated bookings, cancellations, and integrated third-party API validations.</p>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<!-- added justify-content-center to center align the last two projects -->
+<div class="row d-flex justify-content-center">
+<div class="col-md-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<a class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+</a>
+<div class="text mt-3 float-right d-block">
+<h3 class="heading">Collegedunia Web</h3>
+<p>Tested and automated student portal and search workflows; ensured accurate data rendering, SEO compliance, and mobile responsiveness.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 d-flex ftco-animate">
+<div class="blog-entry justify-content-end">
+<a class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+</a>
+<div class="text mt-3 float-right d-block">
+<h3 class="heading"> KickCash, Frizza, and Pocketcharge Apps</h3>
+<p>Managed QA for wallet/reward apps; tested offers, referrals, transactions, and backend APIs across Android builds.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+<div class="container">
+<div class="row d-md-flex align-items-center">
+<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+<div class="block-18">
+<div class="text">
+<strong class="number" data-number="10">0</strong>
+<span>Achievements</span>
+</div>
+</div>
+</div>
+<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+<div class="block-18">
+<div class="text">
+<strong class="number" data-number="30">0</strong>
+<span>Projects</span>
+</div>
+</div>
+</div>
+<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+<div class="block-18">
+<div class="text">
+<strong class="number" data-number="50">0</strong>
+<span>Mentored Students</span>
+</div>
+</div>
+</div>
+<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+<div class="block-18">
+<div class="text">
+<strong class="number" data-number="500">0</strong>
+<span>Cups of coffee</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+<!-- <div class="container"> -->
+<div class="row justify-content-center">
+<div class="col-md-7 ftco-animate text-center">
+<h2>More projects on<span> Github  </span> </h2>
+<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+<br/>
+<p><a class="btn btn-primary py-3 px-5" href="https://github.com/Umeshpathakk">GitHub</a></p>
+</div>
+</div>
+</div>
+<!-- </div> -->
+</div>
+</section>
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+<div class="container">
+<div class="row justify-content-center mb-5 pb-3">
+<div class="col-md-7 heading-section text-center ftco-animate">
+<h1 class="big big-2">Contact</h1>
+<h2 class="mb-4">Contact Me</h2>
+<p>Below are the details to reach out to me!</p>
+</div>
+</div>
+<div class="row d-flex contact-info mb-5">
+<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+<div class="align-self-stretch box p-4 text-center">
+<div class="icon d-flex align-items-center justify-content-center">
+<span class="icon-map-signs"></span>
+</div>
+<h3 class="mb-4">Address</h3>
+<p>New Delhi, India</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+<div class="align-self-stretch box p-4 text-center">
+<div class="icon d-flex align-items-center justify-content-center">
+<span class="icon-phone2"></span>
+</div>
+<h3 class="mb-4">Contact Number</h3>
+<p><a href="tel://0101010101">+91 7503504506</a></p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+<div class="align-self-stretch box p-4 text-center">
+<div class="icon d-flex align-items-center justify-content-center">
+<span class="icon-paper-plane"></span>
+</div>
+<h3 class="mb-4">Email Address</h3>
+<p><a href="mailto:info@yoursite.com">umeshpathakk@gmail.com</a></p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+<div class="align-self-stretch box p-4 text-center">
+<div class="icon d-flex align-items-center justify-content-center">
+<span class="icon-globe"></span>
+</div>
+<h3 class="mb-4">Download Resume</h3>
+<p><a href="#">resumelink</a></p>
+</div>
+</div>
+<div class="container">
+<br/>
+<br/>
+<div class="row justify-content-center">
+<div class="col-md-7 ftco-animate text-center">
+<h2>Have a<span> Question?  </span> <a class="btn btn-primary py-3 px-5" href="https://forms.gle/uLaTShUKXraAvHJ77">Click Here</a> </h2>
+</div>
+</div>
+<br/>
+<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+<li class="ftco-animate normal-txt">Find me on  </li>
+<li class="ftco-animate"><a href="https://www.linkedin.com/in/umeshpathakk/"><span class="icon-linkedin"></span></a></li>
+</ul>
+<br/>
+</div>
+</div>
+</div></section>
+<footer class="ftco-footer ftco-section">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+
+</div>
+</div>
+</div>
+</footer>
+<!-- loader -->
+<div class="show fullscreen" id="ftco-loader"><svg class="circular" height="48px" width="48px"><circle class="path-bg" cx="24" cy="24" fill="none" r="22" stroke="#eeeeee" stroke-width="4"></circle><circle class="path" cx="24" cy="24" fill="none" r="22" stroke="#F96D00" stroke-miterlimit="10" stroke-width="4"></circle></svg></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var toggle = document.getElementById("dark-mode-toggle");
+    if (toggle) {
+        toggle.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+        });
+    }
+});
+</script></body>
+</html>
